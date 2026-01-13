@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { useTheme } from '@/components/ThemeContext';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 export default function Hero() {
   const { theme } = useTheme();
@@ -80,19 +81,19 @@ export default function Hero() {
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
                 <div className={`text-3xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent`}>
-                  500+
+                  <AnimatedCounter end={500} suffix="+" />
                 </div>
                 <div className={`text-sm ${theme.colors.textSecondary} mt-1`}>Clientes</div>
               </div>
               <div className="text-center">
                 <div className={`text-3xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent`}>
-                  15+
+                  <AnimatedCounter end={15} suffix="+" />
                 </div>
                 <div className={`text-sm ${theme.colors.textSecondary} mt-1`}>Años</div>
               </div>
               <div className="text-center">
                 <div className={`text-3xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent`}>
-                  98%
+                  <AnimatedCounter end={98} suffix="%" />
                 </div>
                 <div className={`text-sm ${theme.colors.textSecondary} mt-1`}>Satisfacción</div>
               </div>

@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useTheme } from '@/components/ThemeContext';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 export default function Clients() {
   const { theme } = useTheme();
@@ -218,19 +219,19 @@ export default function Clients() {
         <div className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className={`${theme.colors.glassBg} backdrop-blur-lg rounded-2xl p-8 text-center border ${theme.colors.glassBorder} hover:shadow-xl transition-all`}>
             <div className={`text-4xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent mb-2`}>
-              500+
+              <AnimatedCounter end={500} suffix="+" />
             </div>
             <p className={theme.colors.textSecondary}>Clientes Satisfechos</p>
           </div>
           <div className={`${theme.colors.glassBg} backdrop-blur-lg rounded-2xl p-8 text-center border ${theme.colors.glassBorder} hover:shadow-xl transition-all`}>
             <div className={`text-4xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent mb-2`}>
-              15+
+              <AnimatedCounter end={15} suffix="+" />
             </div>
             <p className={theme.colors.textSecondary}>Años de Experiencia</p>
           </div>
           <div className={`${theme.colors.glassBg} backdrop-blur-lg rounded-2xl p-8 text-center border ${theme.colors.glassBorder} hover:shadow-xl transition-all`}>
             <div className={`text-4xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent mb-2`}>
-              98%
+              <AnimatedCounter end={98} suffix="%" />
             </div>
             <p className={theme.colors.textSecondary}>Tasa de Satisfacción</p>
           </div>
