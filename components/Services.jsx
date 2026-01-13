@@ -4,16 +4,22 @@ import { useTheme } from '@/components/ThemeContext';
 export default function Services() {
   const { theme } = useTheme();
   
-  // Detectar si Services tiene fondo oscuro
+  // Detectar si Services tiene fondo oscuro o claro
   const isDarkBg = theme.colors.bgServices.includes('800') || 
                    theme.colors.bgServices.includes('900') ||
                    theme.colors.bgServices.includes('950');
   
+  const isLightBg = theme.colors.bgServices.includes('50') ||
+                    theme.colors.bgServices.includes('100');
+  
   // Ajustar colores de texto según el fondo
-  const textPrimary = isDarkBg ? 'text-white' : theme.colors.textPrimary;
-  const textSecondary = isDarkBg ? 'text-gray-300' : theme.colors.textSecondary;
-  const cardBg = isDarkBg ? 'bg-white/10' : theme.colors.cardBg;
-  const cardBorder = isDarkBg ? 'border-white/20' : theme.colors.cardBorder;
+  // Si es fondo oscuro (800/900/950) -> texto claro
+  // Si es fondo claro (50/100) -> texto oscuro
+  const textPrimary = isDarkBg ? 'text-white' : (isLightBg ? 'text-gray-900' : theme.colors.textPrimary);
+  const textSecondary = isDarkBg ? 'text-gray-300' : (isLightBg ? 'text-gray-600' : theme.colors.textSecondary);
+  const cardBg = isDarkBg ? 'bg-white/10' : (isLightBg ? 'bg-white' : theme.colors.cardBg);
+  const cardBorder = isDarkBg ? 'border-white/20' : (isLightBg ? 'border-gray-200' : theme.colors.cardBorder);
+  const badgeText = 'text-white'; // Siempre blanco porque el badge tiene fondo de gradiente oscuro
   
   const services = [
     {
@@ -134,7 +140,7 @@ export default function Services() {
                 {service.features.map((feature, idx) => (
                   <li key={idx} className={`flex items-center text-sm ${textSecondary}`}>
                     <svg
-                      className="w-5 h-5 text-green-500 mr-2 flex-shrink-0"
+                      className={`w-5 h-5 mr-2 flex-shrink-0 ${isLightBg ? 'text-green-600' : 'text-emerald-400'}`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
