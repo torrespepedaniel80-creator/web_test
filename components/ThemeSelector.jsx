@@ -444,6 +444,448 @@ export const themes = {
     },
     font: 'font-sans',
   },
+
+  // ========== ADDITIONAL LIGHT THEMES ==========
+  lightOcean: {
+    name: 'Light Ocean',
+    mode: 'light',
+    colors: {
+      bgPrimary: 'bg-cyan-50',
+      bgSecondary: 'bg-white',
+      bgHero: 'bg-gradient-to-br from-cyan-50 via-teal-50 to-blue-50', // CLARO
+      bgServices: 'bg-gradient-to-br from-cyan-800 via-teal-900 to-blue-900', // OSCURO
+      bgClients: 'bg-gradient-to-br from-cyan-50 via-teal-50 to-blue-50', // CLARO
+      bgContact: 'bg-gradient-to-br from-cyan-950 via-teal-950 to-blue-950', // OSCURO
+      bgFooter: 'bg-gradient-to-br from-cyan-900 via-teal-900 to-cyan-900',
+      
+      textPrimary: 'text-cyan-950',
+      textSecondary: 'text-cyan-700',
+      textLight: 'text-cyan-600',
+      textDark: 'text-white',
+      
+      primary: 'from-cyan-600 to-teal-600',
+      primaryHover: 'from-cyan-700 to-teal-700',
+      accent1: 'from-cyan-500 to-blue-500',
+      accent2: 'from-teal-500 to-emerald-500',
+      accent3: 'from-blue-500 to-cyan-500',
+      accent4: 'from-sky-500 to-blue-500',
+      accent5: 'from-teal-500 to-cyan-500',
+      accent6: 'from-blue-500 to-teal-500',
+      
+      cardBg: 'bg-white',
+      cardBgHover: 'bg-cyan-50',
+      cardBorder: 'border-cyan-100',
+      cardShadow: 'shadow-lg shadow-cyan-100',
+      
+      glassBg: 'bg-white/70',
+      glassBorder: 'border-cyan-200/50',
+      
+      headerBg: 'bg-white/80',
+      headerText: 'text-cyan-700',
+      headerTextHover: 'text-cyan-600',
+      
+      scrollbar: 'linear-gradient(to bottom, #0891b2, #14b8a6)',
+      scrollbarHover: 'linear-gradient(to bottom, #0e7490, #0d9488)',
+    },
+    font: 'font-sans',
+  },
+
+  lightSunset: {
+    name: 'Light Sunset',
+    mode: 'light',
+    colors: {
+      bgPrimary: 'bg-amber-50',
+      bgSecondary: 'bg-white',
+      bgHero: 'bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50', // CLARO
+      bgServices: 'bg-gradient-to-br from-amber-800 via-orange-900 to-rose-900', // OSCURO
+      bgClients: 'bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50', // CLARO
+      bgContact: 'bg-gradient-to-br from-amber-950 via-orange-950 to-rose-950', // OSCURO
+      bgFooter: 'bg-gradient-to-br from-amber-900 via-orange-900 to-amber-900',
+      
+      textPrimary: 'text-amber-950',
+      textSecondary: 'text-amber-700',
+      textLight: 'text-amber-600',
+      textDark: 'text-white',
+      
+      primary: 'from-amber-600 to-orange-600',
+      primaryHover: 'from-amber-700 to-orange-700',
+      accent1: 'from-amber-500 to-orange-500',
+      accent2: 'from-orange-500 to-rose-500',
+      accent3: 'from-rose-500 to-pink-500',
+      accent4: 'from-yellow-500 to-amber-500',
+      accent5: 'from-orange-500 to-red-500',
+      accent6: 'from-pink-500 to-rose-500',
+      
+      cardBg: 'bg-white',
+      cardBgHover: 'bg-amber-50',
+      cardBorder: 'border-amber-100',
+      cardShadow: 'shadow-lg shadow-amber-100',
+      
+      glassBg: 'bg-white/70',
+      glassBorder: 'border-amber-200/50',
+      
+      headerBg: 'bg-white/80',
+      headerText: 'text-amber-700',
+      headerTextHover: 'text-amber-600',
+      
+      scrollbar: 'linear-gradient(to bottom, #f59e0b, #f97316)',
+      scrollbarHover: 'linear-gradient(to bottom, #d97706, #ea580c)',
+    },
+    font: 'font-sans',
+  },
+
+  lightForest: {
+    name: 'Light Forest',
+    mode: 'light',
+    colors: {
+      bgPrimary: 'bg-green-50',
+      bgSecondary: 'bg-white',
+      bgHero: 'bg-gradient-to-br from-green-50 via-lime-50 to-emerald-50', // CLARO
+      bgServices: 'bg-gradient-to-br from-green-800 via-lime-900 to-emerald-900', // OSCURO
+      bgClients: 'bg-gradient-to-br from-green-50 via-lime-50 to-emerald-50', // CLARO
+      bgContact: 'bg-gradient-to-br from-green-950 via-lime-950 to-emerald-950', // OSCURO
+      bgFooter: 'bg-gradient-to-br from-green-900 via-emerald-900 to-green-900',
+      
+      textPrimary: 'text-green-950',
+      textSecondary: 'text-green-700',
+      textLight: 'text-green-600',
+      textDark: 'text-white',
+      
+      primary: 'from-green-600 to-emerald-600',
+      primaryHover: 'from-green-700 to-emerald-700',
+      accent1: 'from-green-500 to-lime-500',
+      accent2: 'from-emerald-500 to-teal-500',
+      accent3: 'from-lime-500 to-green-500',
+      accent4: 'from-teal-500 to-emerald-500',
+      accent5: 'from-green-500 to-emerald-500',
+      accent6: 'from-emerald-500 to-green-500',
+      
+      cardBg: 'bg-white',
+      cardBgHover: 'bg-green-50',
+      cardBorder: 'border-green-100',
+      cardShadow: 'shadow-lg shadow-green-100',
+      
+      glassBg: 'bg-white/70',
+      glassBorder: 'border-green-200/50',
+      
+      headerBg: 'bg-white/80',
+      headerText: 'text-green-700',
+      headerTextHover: 'text-green-600',
+      
+      scrollbar: 'linear-gradient(to bottom, #16a34a, #10b981)',
+      scrollbarHover: 'linear-gradient(to bottom, #15803d, #059669)',
+    },
+    font: 'font-sans',
+  },
+
+  lightLavender: {
+    name: 'Light Lavender',
+    mode: 'light',
+    colors: {
+      bgPrimary: 'bg-purple-50',
+      bgSecondary: 'bg-white',
+      bgHero: 'bg-gradient-to-br from-purple-50 via-fuchsia-50 to-pink-50', // CLARO
+      bgServices: 'bg-gradient-to-br from-purple-800 via-fuchsia-900 to-pink-900', // OSCURO
+      bgClients: 'bg-gradient-to-br from-purple-50 via-fuchsia-50 to-pink-50', // CLARO
+      bgContact: 'bg-gradient-to-br from-purple-950 via-fuchsia-950 to-pink-950', // OSCURO
+      bgFooter: 'bg-gradient-to-br from-purple-900 via-fuchsia-900 to-purple-900',
+      
+      textPrimary: 'text-purple-950',
+      textSecondary: 'text-purple-700',
+      textLight: 'text-purple-600',
+      textDark: 'text-white',
+      
+      primary: 'from-purple-600 to-fuchsia-600',
+      primaryHover: 'from-purple-700 to-fuchsia-700',
+      accent1: 'from-purple-500 to-fuchsia-500',
+      accent2: 'from-fuchsia-500 to-pink-500',
+      accent3: 'from-pink-500 to-rose-500',
+      accent4: 'from-violet-500 to-purple-500',
+      accent5: 'from-fuchsia-500 to-purple-500',
+      accent6: 'from-pink-500 to-fuchsia-500',
+      
+      cardBg: 'bg-white',
+      cardBgHover: 'bg-purple-50',
+      cardBorder: 'border-purple-100',
+      cardShadow: 'shadow-lg shadow-purple-100',
+      
+      glassBg: 'bg-white/70',
+      glassBorder: 'border-purple-200/50',
+      
+      headerBg: 'bg-white/80',
+      headerText: 'text-purple-700',
+      headerTextHover: 'text-purple-600',
+      
+      scrollbar: 'linear-gradient(to bottom, #9333ea, #d946ef)',
+      scrollbarHover: 'linear-gradient(to bottom, #7e22ce, #c026d3)',
+    },
+    font: 'font-sans',
+  },
+
+  lightMinimal: {
+    name: 'Light Minimal',
+    mode: 'light',
+    colors: {
+      bgPrimary: 'bg-neutral-50',
+      bgSecondary: 'bg-white',
+      bgHero: 'bg-gradient-to-br from-neutral-50 via-stone-50 to-zinc-50', // CLARO
+      bgServices: 'bg-gradient-to-br from-neutral-800 via-stone-900 to-zinc-900', // OSCURO
+      bgClients: 'bg-gradient-to-br from-neutral-50 via-stone-50 to-zinc-50', // CLARO
+      bgContact: 'bg-gradient-to-br from-neutral-950 via-stone-950 to-zinc-950', // OSCURO
+      bgFooter: 'bg-gradient-to-br from-neutral-900 via-stone-900 to-neutral-900',
+      
+      textPrimary: 'text-neutral-950',
+      textSecondary: 'text-neutral-700',
+      textLight: 'text-neutral-600',
+      textDark: 'text-white',
+      
+      primary: 'from-neutral-600 to-stone-600',
+      primaryHover: 'from-neutral-700 to-stone-700',
+      accent1: 'from-neutral-500 to-stone-500',
+      accent2: 'from-stone-500 to-zinc-500',
+      accent3: 'from-zinc-500 to-neutral-500',
+      accent4: 'from-slate-500 to-neutral-500',
+      accent5: 'from-neutral-500 to-zinc-500',
+      accent6: 'from-stone-500 to-neutral-500',
+      
+      cardBg: 'bg-white',
+      cardBgHover: 'bg-neutral-50',
+      cardBorder: 'border-neutral-100',
+      cardShadow: 'shadow-lg shadow-neutral-100',
+      
+      glassBg: 'bg-white/70',
+      glassBorder: 'border-neutral-200/50',
+      
+      headerBg: 'bg-white/80',
+      headerText: 'text-neutral-700',
+      headerTextHover: 'text-neutral-600',
+      
+      scrollbar: 'linear-gradient(to bottom, #525252, #78716c)',
+      scrollbarHover: 'linear-gradient(to bottom, #404040, #57534e)',
+    },
+    font: 'font-sans',
+  },
+
+  // ========== ADDITIONAL DARK THEMES ==========
+  darkCyber: {
+    name: 'Dark Cyber',
+    mode: 'dark',
+    colors: {
+      bgPrimary: 'bg-cyan-950',
+      bgSecondary: 'bg-cyan-900',
+      bgHero: 'bg-gradient-to-br from-cyan-950 via-blue-950 to-teal-950', // OSCURO
+      bgServices: 'bg-gradient-to-br from-cyan-100 via-blue-100 to-teal-100', // CLARO
+      bgClients: 'bg-gradient-to-br from-cyan-950 via-blue-950 to-teal-950', // OSCURO
+      bgContact: 'bg-gradient-to-br from-cyan-950 via-teal-950 to-black', // OSCURO
+      bgFooter: 'bg-gradient-to-br from-black via-cyan-950 to-black',
+      
+      textPrimary: 'text-cyan-50',
+      textSecondary: 'text-cyan-200',
+      textLight: 'text-cyan-300',
+      textDark: 'text-white',
+      
+      primary: 'from-cyan-500 to-teal-500',
+      primaryHover: 'from-cyan-600 to-teal-600',
+      accent1: 'from-cyan-400 to-blue-500',
+      accent2: 'from-teal-500 to-emerald-500',
+      accent3: 'from-blue-500 to-cyan-500',
+      accent4: 'from-sky-500 to-cyan-500',
+      accent5: 'from-teal-500 to-cyan-500',
+      accent6: 'from-cyan-500 to-blue-500',
+      
+      cardBg: 'bg-cyan-950/50',
+      cardBgHover: 'bg-cyan-900/50',
+      cardBorder: 'border-cyan-900',
+      cardShadow: 'shadow-2xl shadow-cyan-500/10',
+      
+      glassBg: 'bg-cyan-950/40',
+      glassBorder: 'border-cyan-900/50',
+      
+      headerBg: 'bg-cyan-950/80',
+      headerText: 'text-cyan-200',
+      headerTextHover: 'text-cyan-400',
+      
+      scrollbar: 'linear-gradient(to bottom, #06b6d4, #14b8a6)',
+      scrollbarHover: 'linear-gradient(to bottom, #0891b2, #0d9488)',
+    },
+    font: 'font-sans',
+  },
+
+  darkVintage: {
+    name: 'Dark Vintage',
+    mode: 'dark',
+    colors: {
+      bgPrimary: 'bg-amber-950',
+      bgSecondary: 'bg-amber-900',
+      bgHero: 'bg-gradient-to-br from-amber-950 via-orange-950 to-yellow-950', // OSCURO
+      bgServices: 'bg-gradient-to-br from-amber-100 via-orange-100 to-yellow-100', // CLARO
+      bgClients: 'bg-gradient-to-br from-amber-950 via-orange-950 to-yellow-950', // OSCURO
+      bgContact: 'bg-gradient-to-br from-amber-950 via-orange-950 to-black', // OSCURO
+      bgFooter: 'bg-gradient-to-br from-black via-amber-950 to-black',
+      
+      textPrimary: 'text-amber-50',
+      textSecondary: 'text-amber-200',
+      textLight: 'text-amber-300',
+      textDark: 'text-white',
+      
+      primary: 'from-amber-500 to-orange-500',
+      primaryHover: 'from-amber-600 to-orange-600',
+      accent1: 'from-amber-400 to-yellow-500',
+      accent2: 'from-orange-500 to-red-500',
+      accent3: 'from-yellow-500 to-amber-500',
+      accent4: 'from-orange-500 to-amber-500',
+      accent5: 'from-amber-500 to-orange-500',
+      accent6: 'from-yellow-500 to-orange-500',
+      
+      cardBg: 'bg-amber-950/50',
+      cardBgHover: 'bg-amber-900/50',
+      cardBorder: 'border-amber-900',
+      cardShadow: 'shadow-2xl shadow-amber-500/10',
+      
+      glassBg: 'bg-amber-950/40',
+      glassBorder: 'border-amber-900/50',
+      
+      headerBg: 'bg-amber-950/80',
+      headerText: 'text-amber-200',
+      headerTextHover: 'text-amber-400',
+      
+      scrollbar: 'linear-gradient(to bottom, #f59e0b, #f97316)',
+      scrollbarHover: 'linear-gradient(to bottom, #d97706, #ea580c)',
+    },
+    font: 'font-sans',
+  },
+
+  darkNeon: {
+    name: 'Dark Neon',
+    mode: 'dark',
+    colors: {
+      bgPrimary: 'bg-fuchsia-950',
+      bgSecondary: 'bg-fuchsia-900',
+      bgHero: 'bg-gradient-to-br from-fuchsia-950 via-pink-950 to-purple-950', // OSCURO
+      bgServices: 'bg-gradient-to-br from-fuchsia-100 via-pink-100 to-purple-100', // CLARO
+      bgClients: 'bg-gradient-to-br from-fuchsia-950 via-pink-950 to-purple-950', // OSCURO
+      bgContact: 'bg-gradient-to-br from-fuchsia-950 via-pink-950 to-black', // OSCURO
+      bgFooter: 'bg-gradient-to-br from-black via-fuchsia-950 to-black',
+      
+      textPrimary: 'text-fuchsia-50',
+      textSecondary: 'text-fuchsia-200',
+      textLight: 'text-fuchsia-300',
+      textDark: 'text-white',
+      
+      primary: 'from-fuchsia-500 to-pink-500',
+      primaryHover: 'from-fuchsia-600 to-pink-600',
+      accent1: 'from-fuchsia-400 to-purple-500',
+      accent2: 'from-pink-500 to-rose-500',
+      accent3: 'from-purple-500 to-fuchsia-500',
+      accent4: 'from-pink-500 to-fuchsia-500',
+      accent5: 'from-fuchsia-500 to-purple-500',
+      accent6: 'from-rose-500 to-pink-500',
+      
+      cardBg: 'bg-fuchsia-950/50',
+      cardBgHover: 'bg-fuchsia-900/50',
+      cardBorder: 'border-fuchsia-900',
+      cardShadow: 'shadow-2xl shadow-fuchsia-500/10',
+      
+      glassBg: 'bg-fuchsia-950/40',
+      glassBorder: 'border-fuchsia-900/50',
+      
+      headerBg: 'bg-fuchsia-950/80',
+      headerText: 'text-fuchsia-200',
+      headerTextHover: 'text-fuchsia-400',
+      
+      scrollbar: 'linear-gradient(to bottom, #d946ef, #ec4899)',
+      scrollbarHover: 'linear-gradient(to bottom, #c026d3, #db2777)',
+    },
+    font: 'font-sans',
+  },
+
+  darkMonochrome: {
+    name: 'Dark Monochrome',
+    mode: 'dark',
+    colors: {
+      bgPrimary: 'bg-neutral-950',
+      bgSecondary: 'bg-neutral-900',
+      bgHero: 'bg-gradient-to-br from-neutral-950 via-stone-950 to-zinc-950', // OSCURO
+      bgServices: 'bg-gradient-to-br from-neutral-100 via-stone-100 to-zinc-100', // CLARO
+      bgClients: 'bg-gradient-to-br from-neutral-950 via-stone-950 to-zinc-950', // OSCURO
+      bgContact: 'bg-gradient-to-br from-neutral-950 via-stone-950 to-black', // OSCURO
+      bgFooter: 'bg-gradient-to-br from-black via-neutral-950 to-black',
+      
+      textPrimary: 'text-neutral-50',
+      textSecondary: 'text-neutral-200',
+      textLight: 'text-neutral-300',
+      textDark: 'text-white',
+      
+      primary: 'from-neutral-500 to-stone-500',
+      primaryHover: 'from-neutral-600 to-stone-600',
+      accent1: 'from-neutral-400 to-zinc-500',
+      accent2: 'from-stone-500 to-neutral-500',
+      accent3: 'from-zinc-500 to-stone-500',
+      accent4: 'from-slate-500 to-neutral-500',
+      accent5: 'from-neutral-500 to-zinc-500',
+      accent6: 'from-stone-500 to-zinc-500',
+      
+      cardBg: 'bg-neutral-950/50',
+      cardBgHover: 'bg-neutral-900/50',
+      cardBorder: 'border-neutral-900',
+      cardShadow: 'shadow-2xl shadow-neutral-500/10',
+      
+      glassBg: 'bg-neutral-950/40',
+      glassBorder: 'border-neutral-900/50',
+      
+      headerBg: 'bg-neutral-950/80',
+      headerText: 'text-neutral-200',
+      headerTextHover: 'text-neutral-400',
+      
+      scrollbar: 'linear-gradient(to bottom, #525252, #78716c)',
+      scrollbarHover: 'linear-gradient(to bottom, #404040, #57534e)',
+    },
+    font: 'font-sans',
+  },
+
+  darkAurora: {
+    name: 'Dark Aurora',
+    mode: 'dark',
+    colors: {
+      bgPrimary: 'bg-violet-950',
+      bgSecondary: 'bg-violet-900',
+      bgHero: 'bg-gradient-to-br from-violet-950 via-purple-950 to-indigo-950', // OSCURO
+      bgServices: 'bg-gradient-to-br from-violet-100 via-purple-100 to-indigo-100', // CLARO
+      bgClients: 'bg-gradient-to-br from-violet-950 via-purple-950 to-indigo-950', // OSCURO
+      bgContact: 'bg-gradient-to-br from-violet-950 via-purple-950 to-black', // OSCURO
+      bgFooter: 'bg-gradient-to-br from-black via-violet-950 to-black',
+      
+      textPrimary: 'text-violet-50',
+      textSecondary: 'text-violet-200',
+      textLight: 'text-violet-300',
+      textDark: 'text-white',
+      
+      primary: 'from-violet-500 to-purple-500',
+      primaryHover: 'from-violet-600 to-purple-600',
+      accent1: 'from-violet-400 to-indigo-500',
+      accent2: 'from-purple-500 to-fuchsia-500',
+      accent3: 'from-indigo-500 to-violet-500',
+      accent4: 'from-purple-500 to-violet-500',
+      accent5: 'from-violet-500 to-fuchsia-500',
+      accent6: 'from-indigo-500 to-purple-500',
+      
+      cardBg: 'bg-violet-950/50',
+      cardBgHover: 'bg-violet-900/50',
+      cardBorder: 'border-violet-900',
+      cardShadow: 'shadow-2xl shadow-violet-500/10',
+      
+      glassBg: 'bg-violet-950/40',
+      glassBorder: 'border-violet-900/50',
+      
+      headerBg: 'bg-violet-950/80',
+      headerText: 'text-violet-200',
+      headerTextHover: 'text-violet-400',
+      
+      scrollbar: 'linear-gradient(to bottom, #8b5cf6, #a855f7)',
+      scrollbarHover: 'linear-gradient(to bottom, #7c3aed, #9333ea)',
+    },
+    font: 'font-sans',
+  },
 };
 
 export default function ThemeSelector({ currentTheme, onThemeChange }) {

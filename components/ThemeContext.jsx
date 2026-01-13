@@ -27,13 +27,30 @@ export function ThemeProvider({ children }) {
     
     // Update font family
     const fontMap = {
-      classic: 'var(--font-geist-sans)',
-      modern: 'var(--font-inter)',
-      elegant: 'var(--font-playfair)',
-      fresh: 'var(--font-poppins)',
-      corporate: 'var(--font-roboto)',
+      // Light themes
+      lightProfessional: 'var(--font-geist-sans)',
+      lightModern: 'var(--font-inter)',
+      lightNature: 'var(--font-poppins)',
+      lightWarm: 'var(--font-roboto)',
+      lightRoyal: 'var(--font-playfair)',
+      lightOcean: 'var(--font-inter)',
+      lightSunset: 'var(--font-poppins)',
+      lightForest: 'var(--font-roboto)',
+      lightLavender: 'var(--font-playfair)',
+      lightMinimal: 'var(--font-geist-sans)',
+      // Dark themes
+      darkElegant: 'var(--font-playfair)',
+      darkCorporate: 'var(--font-roboto)',
+      darkForest: 'var(--font-poppins)',
+      darkSunset: 'var(--font-inter)',
+      darkMidnight: 'var(--font-geist-sans)',
+      darkCyber: 'var(--font-inter)',
+      darkVintage: 'var(--font-playfair)',
+      darkNeon: 'var(--font-poppins)',
+      darkMonochrome: 'var(--font-roboto)',
+      darkAurora: 'var(--font-geist-sans)',
     };
-    document.body.style.fontFamily = fontMap[currentTheme] || fontMap.classic;
+    document.body.style.fontFamily = fontMap[currentTheme] || fontMap.lightProfessional;
   }, [currentTheme]);
 
   const theme = themes[currentTheme];

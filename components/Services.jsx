@@ -5,13 +5,8 @@ export default function Services() {
   const { theme } = useTheme();
   
   // Detectar si Services tiene fondo oscuro
-  const isDarkBg = theme.colors.bgServices.includes('gray-800') || 
-                   theme.colors.bgServices.includes('gray-900') ||
-                   theme.colors.bgServices.includes('blue-900') ||
-                   theme.colors.bgServices.includes('purple-900') ||
-                   theme.colors.bgServices.includes('emerald-900') ||
-                   theme.colors.bgServices.includes('red-900') ||
-                   theme.colors.bgServices.includes('violet-900') ||
+  const isDarkBg = theme.colors.bgServices.includes('800') || 
+                   theme.colors.bgServices.includes('900') ||
                    theme.colors.bgServices.includes('950');
   
   // Ajustar colores de texto según el fondo
