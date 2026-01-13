@@ -1,12 +1,17 @@
+'use client';
+import { useTheme } from '@/components/ThemeContext';
+
 export default function Footer() {
+  const { theme } = useTheme();
+  
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <footer className={`${theme.colors.bgFooter} text-white`}>
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className={`w-10 h-10 bg-gradient-to-br ${theme.colors.primary} rounded-lg flex items-center justify-center`}>
                 <span className="text-white font-bold text-xl">C</span>
               </div>
               <span className="text-2xl font-bold">ContaPlus</span>

@@ -246,6 +246,8 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  --scrollbar-gradient: linear-gradient(to bottom, #2563eb, #9333ea);
+  --scrollbar-gradient-hover: linear-gradient(to bottom, #1d4ed8, #7e22ce);
 }
 
 /* Custom scrollbar */
@@ -258,10 +260,10 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #2563eb, #9333ea);
+  background: var(--scrollbar-gradient);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #1d4ed8, #7e22ce);
+  background: var(--scrollbar-gradient-hover);
 }

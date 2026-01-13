@@ -1,7 +1,10 @@
 'use client';
 import { Button } from '@/components/ui/button';
+import { useTheme } from '@/components/ThemeContext';
 
 export default function Hero() {
+  const { theme } = useTheme();
+  
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -12,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${theme.colors.bgHero}`}
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -26,20 +29,20 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8 animate-slideInLeft">
             <div className="inline-block">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              <span className={`bg-gradient-to-r ${theme.colors.primary} text-white px-4 py-2 rounded-full text-sm font-semibold`}>
                 ✨ Servicios Contables Profesionales
               </span>
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className={`bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent`}>
                 Impulsa tu Negocio
               </span>
               <br />
-              <span className="text-gray-900">con Contabilidad Experta</span>
+              <span className={theme.colors.textPrimary}>con Contabilidad Experta</span>
             </h1>
 
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className={`text-xl ${theme.colors.textSecondary} leading-relaxed`}>
               Optimiza tus finanzas con nuestros servicios de contabilidad, auditoría y asesoría fiscal. 
               Más de 15 años de experiencia respaldando el éxito de empresas como la tuya.
             </p>
@@ -47,7 +50,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 onClick={() => scrollToSection('contacto')}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                className={`bg-gradient-to-r ${theme.colors.primary} hover:${theme.colors.primaryHover} text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105`}
               >
                 Consulta Gratuita
                 <svg
@@ -67,7 +70,7 @@ export default function Hero() {
               <Button
                 onClick={() => scrollToSection('servicios')}
                 variant="outline"
-                className="border-2 border-gray-300 hover:border-blue-600 px-8 py-6 text-lg rounded-xl hover:bg-blue-50 transition-all"
+                className={`border-2 ${theme.colors.cardBorder} hover:border-blue-600 px-8 py-6 text-lg rounded-xl ${theme.colors.cardBgHover} transition-all ${theme.colors.textPrimary}`}
               >
                 Ver Servicios
               </Button>
@@ -76,22 +79,22 @@ export default function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <div className={`text-3xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent`}>
                   500+
                 </div>
-                <div className="text-sm text-gray-600 mt-1">Clientes</div>
+                <div className={`text-sm ${theme.colors.textSecondary} mt-1`}>Clientes</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <div className={`text-3xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent`}>
                   15+
                 </div>
-                <div className="text-sm text-gray-600 mt-1">Años</div>
+                <div className={`text-sm ${theme.colors.textSecondary} mt-1`}>Años</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <div className={`text-3xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent`}>
                   98%
                 </div>
-                <div className="text-sm text-gray-600 mt-1">Satisfacción</div>
+                <div className={`text-sm ${theme.colors.textSecondary} mt-1`}>Satisfacción</div>
               </div>
             </div>
           </div>
@@ -100,10 +103,10 @@ export default function Hero() {
           <div className="relative animate-slideInRight">
             <div className="relative">
               {/* Glassmorphism Card */}
-              <div className="bg-white/40 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-white/50">
+              <div className={`${theme.colors.glassBg} backdrop-blur-lg rounded-3xl p-8 shadow-2xl border ${theme.colors.glassBorder}`}>
                 <div className="space-y-6">
                   {/* Feature Cards */}
-                  <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-6 text-white transform hover:scale-105 transition-transform">
+                  <div className={`bg-gradient-to-br ${theme.colors.accent1} rounded-2xl p-6 text-white transform hover:scale-105 transition-transform`}>
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
                         <svg
@@ -122,12 +125,12 @@ export default function Hero() {
                       </div>
                       <div>
                         <h3 className="font-semibold">Contabilidad Precisa</h3>
-                        <p className="text-sm text-blue-100">100% Confiable</p>
+                        <p className="text-sm opacity-90">100% Confiable</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-6 text-white transform hover:scale-105 transition-transform">
+                  <div className={`bg-gradient-to-br ${theme.colors.accent2} rounded-2xl p-6 text-white transform hover:scale-105 transition-transform`}>
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
                         <svg
@@ -146,12 +149,12 @@ export default function Hero() {
                       </div>
                       <div>
                         <h3 className="font-semibold">Respuesta Rápida</h3>
-                        <p className="text-sm text-purple-100">24/7 Disponible</p>
+                        <p className="text-sm opacity-90">24/7 Disponible</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl p-6 text-white transform hover:scale-105 transition-transform">
+                  <div className={`bg-gradient-to-br ${theme.colors.accent3} rounded-2xl p-6 text-white transform hover:scale-105 transition-transform`}>
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
                         <svg
@@ -170,7 +173,7 @@ export default function Hero() {
                       </div>
                       <div>
                         <h3 className="font-semibold">Ahorro Garantizado</h3>
-                        <p className="text-sm text-pink-100">Optimiza Costos</p>
+                        <p className="text-sm opacity-90">Optimiza Costos</p>
                       </div>
                     </div>
                   </div>
@@ -188,7 +191,7 @@ export default function Hero() {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <svg
-          className="w-6 h-6 text-gray-400"
+          className={`w-6 h-6 ${theme.colors.textLight}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

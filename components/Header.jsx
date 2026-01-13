@@ -1,8 +1,10 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { useTheme } from '@/components/ThemeContext';
 
 export default function Header() {
+  const { theme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -34,10 +36,10 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+            <div className={`w-10 h-10 bg-gradient-to-br ${theme.colors.primary} rounded-lg flex items-center justify-center`}>
               <span className="text-white font-bold text-xl">C</span>
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className={`text-2xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent`}>
               ContaPlus
             </span>
           </div>
@@ -70,7 +72,7 @@ export default function Header() {
             </button>
             <Button
               onClick={() => scrollToSection('contacto')}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6"
+              className={`bg-gradient-to-r ${theme.colors.primary} hover:${theme.colors.primaryHover} text-white px-6`}
             >
               Consulta Gratis
             </Button>
@@ -135,7 +137,7 @@ export default function Header() {
             </button>
             <Button
               onClick={() => scrollToSection('contacto')}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+              className={`w-full bg-gradient-to-r ${theme.colors.primary} hover:${theme.colors.primaryHover} text-white`}
             >
               Consulta Gratis
             </Button>

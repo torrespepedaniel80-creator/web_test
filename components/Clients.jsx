@@ -1,7 +1,9 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { useTheme } from '@/components/ThemeContext';
 
 export default function Clients() {
+  const { theme } = useTheme();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const testimonials = [
@@ -62,7 +64,7 @@ export default function Clients() {
   };
 
   return (
-    <section id="clientes" className="py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 relative overflow-hidden">
+    <section id="clientes" className={`py-24 ${theme.colors.bgClients} relative overflow-hidden`}>
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-10 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl"></div>
@@ -73,18 +75,18 @@ export default function Clients() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fadeIn">
           <div className="inline-block mb-4">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+            <span className={`bg-gradient-to-r ${theme.colors.primary} text-white px-4 py-2 rounded-full text-sm font-semibold`}>
               Testimonios
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gray-900">Lo que dicen</span>
+            <span className={theme.colors.textPrimary}>Lo que dicen</span>
             <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className={`bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent`}>
               Nuestros Clientes
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className={`text-xl ${theme.colors.textSecondary} max-w-2xl mx-auto`}>
             La confianza de nuestros clientes es nuestro mayor logro
           </p>
         </div>
@@ -100,7 +102,7 @@ export default function Clients() {
               >
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className="bg-white/60 backdrop-blur-lg rounded-3xl p-8 md:p-12 shadow-xl border border-white/50">
+                    <div className={`${theme.colors.glassBg} backdrop-blur-lg rounded-3xl p-8 md:p-12 shadow-xl border ${theme.colors.glassBorder}`}>
                       {/* Stars */}
                       <div className="flex justify-center mb-6">
                         {[...Array(testimonial.rating)].map((_, i) => (
@@ -115,20 +117,20 @@ export default function Clients() {
                       </div>
 
                       {/* Testimonial Text */}
-                      <p className="text-xl md:text-2xl text-gray-700 text-center mb-8 leading-relaxed italic">
+                      <p className={`text-xl md:text-2xl ${theme.colors.textPrimary} text-center mb-8 leading-relaxed italic`}>
                         &ldquo;{testimonial.text}&rdquo;
                       </p>
 
                       {/* Author */}
                       <div className="flex items-center justify-center space-x-4">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-3xl shadow-lg">
+                        <div className={`w-16 h-16 bg-gradient-to-br ${theme.colors.primary} rounded-full flex items-center justify-center text-3xl shadow-lg`}>
                           {testimonial.image}
                         </div>
                         <div className="text-left">
-                          <h4 className="font-bold text-gray-900 text-lg">
+                          <h4 className={`font-bold ${theme.colors.textPrimary} text-lg`}>
                             {testimonial.name}
                           </h4>
-                          <p className="text-gray-600 text-sm">{testimonial.position}</p>
+                          <p className={`${theme.colors.textSecondary} text-sm`}>{testimonial.position}</p>
                         </div>
                       </div>
                     </div>
@@ -140,10 +142,10 @@ export default function Clients() {
             {/* Navigation Buttons */}
             <button
               onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-all hover:scale-110"
+              className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 ${theme.colors.cardBg} rounded-full shadow-lg flex items-center justify-center hover:${theme.colors.cardBgHover} transition-all hover:scale-110`}
             >
               <svg
-                className="w-6 h-6 text-gray-700"
+                className={`w-6 h-6 ${theme.colors.textPrimary}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -158,10 +160,10 @@ export default function Clients() {
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-all hover:scale-110"
+              className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 ${theme.colors.cardBg} rounded-full shadow-lg flex items-center justify-center hover:${theme.colors.cardBgHover} transition-all hover:scale-110`}
             >
               <svg
-                className="w-6 h-6 text-gray-700"
+                className={`w-6 h-6 ${theme.colors.textPrimary}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -183,8 +185,8 @@ export default function Clients() {
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all ${
                     index === currentSlide
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 w-8'
-                      : 'bg-gray-300 hover:bg-gray-400'
+                      ? `bg-gradient-to-r ${theme.colors.primary} w-8`
+                      : `${theme.colors.bgSecondary} hover:bg-gray-400`
                   }`}
                 />
               ))}
@@ -194,19 +196,19 @@ export default function Clients() {
 
         {/* Clients Logo Grid */}
         <div className="mt-20">
-          <h3 className="text-2xl font-bold text-center mb-12 text-gray-700">
+          <h3 className={`text-2xl font-bold text-center mb-12 ${theme.colors.textPrimary}`}>
             Empresas que confían en nosotros
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {clients.map((client, index) => (
               <div
                 key={index}
-                className="bg-white/60 backdrop-blur-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all hover:-translate-y-2 border border-white/50 group"
+                className={`${theme.colors.glassBg} backdrop-blur-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all hover:-translate-y-2 border ${theme.colors.glassBorder} group`}
               >
                 <div className="text-5xl mb-3 group-hover:scale-110 transition-transform">
                   {client.logo}
                 </div>
-                <p className="text-gray-700 font-semibold">{client.name}</p>
+                <p className={`${theme.colors.textPrimary} font-semibold`}>{client.name}</p>
               </div>
             ))}
           </div>
@@ -214,29 +216,29 @@ export default function Clients() {
 
         {/* Stats Section */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="bg-white/60 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/50 hover:shadow-xl transition-all">
-            <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+          <div className={`${theme.colors.glassBg} backdrop-blur-lg rounded-2xl p-8 text-center border ${theme.colors.glassBorder} hover:shadow-xl transition-all`}>
+            <div className={`text-4xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent mb-2`}>
               500+
             </div>
-            <p className="text-gray-600">Clientes Satisfechos</p>
+            <p className={theme.colors.textSecondary}>Clientes Satisfechos</p>
           </div>
-          <div className="bg-white/60 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/50 hover:shadow-xl transition-all">
-            <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+          <div className={`${theme.colors.glassBg} backdrop-blur-lg rounded-2xl p-8 text-center border ${theme.colors.glassBorder} hover:shadow-xl transition-all`}>
+            <div className={`text-4xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent mb-2`}>
               15+
             </div>
-            <p className="text-gray-600">Años de Experiencia</p>
+            <p className={theme.colors.textSecondary}>Años de Experiencia</p>
           </div>
-          <div className="bg-white/60 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/50 hover:shadow-xl transition-all">
-            <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+          <div className={`${theme.colors.glassBg} backdrop-blur-lg rounded-2xl p-8 text-center border ${theme.colors.glassBorder} hover:shadow-xl transition-all`}>
+            <div className={`text-4xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent mb-2`}>
               98%
             </div>
-            <p className="text-gray-600">Tasa de Satisfacción</p>
+            <p className={theme.colors.textSecondary}>Tasa de Satisfacción</p>
           </div>
-          <div className="bg-white/60 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/50 hover:shadow-xl transition-all">
-            <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+          <div className={`${theme.colors.glassBg} backdrop-blur-lg rounded-2xl p-8 text-center border ${theme.colors.glassBorder} hover:shadow-xl transition-all`}>
+            <div className={`text-4xl font-bold bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent mb-2`}>
               24/7
             </div>
-            <p className="text-gray-600">Soporte Disponible</p>
+            <p className={theme.colors.textSecondary}>Soporte Disponible</p>
           </div>
         </div>
       </div>

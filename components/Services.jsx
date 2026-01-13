@@ -1,123 +1,96 @@
 'use client';
+import { useTheme } from '@/components/ThemeContext';
 
 export default function Services() {
+  const { theme } = useTheme();
+  
   const services = [
     {
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       ),
       title: 'Contabilidad General',
       description: 'Registro y control completo de todas tus operaciones financieras con precisión y cumplimiento normativo.',
       features: ['Estados Financieros', 'Libros Contables', 'Conciliaciones Bancarias'],
-      color: 'from-blue-500 to-cyan-500',
+      color: 'accent1',
     },
     {
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
       ),
       title: 'Auditoría',
       description: 'Evaluación independiente y objetiva de tus estados financieros para garantizar transparencia y confianza.',
       features: ['Auditoría Externa', 'Auditoría Interna', 'Due Diligence'],
-      color: 'from-purple-500 to-pink-500',
+      color: 'accent2',
     },
     {
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
       title: 'Asesoría Fiscal',
       description: 'Optimización tributaria y cumplimiento fiscal para maximizar tus beneficios y minimizar riesgos.',
       features: ['Planificación Fiscal', 'Declaraciones', 'Defensa Tributaria'],
-      color: 'from-green-500 to-teal-500',
+      color: 'accent3',
     },
     {
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
       title: 'Gestión de Nóminas',
       description: 'Administración completa de nóminas, seguridad social y obligaciones laborales de tu empresa.',
       features: ['Cálculo de Nóminas', 'Seguridad Social', 'Contratos Laborales'],
-      color: 'from-orange-500 to-red-500',
+      color: 'accent4',
     },
     {
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
         </svg>
       ),
       title: 'Consultoría Empresarial',
       description: 'Asesoramiento estratégico para la toma de decisiones y el crecimiento sostenible de tu negocio.',
       features: ['Análisis Financiero', 'Planes de Negocio', 'Valoración de Empresas'],
-      color: 'from-indigo-500 to-purple-500',
+      color: 'accent5',
     },
     {
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
         </svg>
       ),
       title: 'Servicios Digitales',
       description: 'Implementación de soluciones tecnológicas para automatizar y optimizar tus procesos contables.',
       features: ['Facturación Electrónica', 'Software Contable', 'Reportes en Tiempo Real'],
-      color: 'from-pink-500 to-rose-500',
+      color: 'accent6',
     },
   ];
 
   return (
-    <section id="servicios" className="py-24 bg-gradient-to-br from-gray-50 to-white">
+    <section id="servicios" className={`py-24 ${theme.colors.bgServices}`}>
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fadeIn">
           <div className="inline-block mb-4">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+            <span className={`bg-gradient-to-r ${theme.colors.primary} text-white px-4 py-2 rounded-full text-sm font-semibold`}>
               Nuestros Servicios
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className={`bg-gradient-to-r ${theme.colors.primary} bg-clip-text text-transparent`}>
               Soluciones Integrales
             </span>
             <br />
-            <span className="text-gray-900">para tu Empresa</span>
+            <span className={theme.colors.textPrimary}>para tu Empresa</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className={`text-xl ${theme.colors.textSecondary} max-w-2xl mx-auto`}>
             Ofrecemos una amplia gama de servicios contables y financieros diseñados para impulsar el éxito de tu negocio.
           </p>
         </div>
@@ -127,28 +100,28 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 animate-fadeInUp"
+              className={`group ${theme.colors.cardBg} rounded-2xl p-8 ${theme.colors.cardShadow} hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border ${theme.colors.cardBorder} animate-fadeInUp`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Icon */}
               <div
-                className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                className={`w-16 h-16 bg-gradient-to-br ${theme.colors[service.color]} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
               >
                 {service.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">
+              <h3 className={`text-2xl font-bold mb-3 ${theme.colors.textPrimary} group-hover:bg-gradient-to-r group-hover:${theme.colors.primary} group-hover:bg-clip-text group-hover:text-transparent transition-colors`}>
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+              <p className={`${theme.colors.textSecondary} mb-6 leading-relaxed`}>{service.description}</p>
 
               {/* Features */}
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-sm text-gray-700">
+                  <li key={idx} className={`flex items-center text-sm ${theme.colors.textSecondary}`}>
                     <svg
                       className="w-5 h-5 text-green-500 mr-2 flex-shrink-0"
                       fill="none"
@@ -169,7 +142,7 @@ export default function Services() {
 
               {/* CTA */}
               <button
-                className={`w-full py-3 rounded-xl font-semibold bg-gradient-to-r ${service.color} text-white hover:shadow-lg transition-all duration-300 hover:scale-105`}
+                className={`w-full py-3 rounded-xl font-semibold bg-gradient-to-r ${theme.colors[service.color]} text-white hover:shadow-lg transition-all duration-300 hover:scale-105`}
               >
                 Más Información
               </button>
@@ -179,8 +152,8 @@ export default function Services() {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-4">¿No encuentras lo que buscas?</p>
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105">
+          <p className={`${theme.colors.textSecondary} mb-4`}>¿No encuentras lo que buscas?</p>
+          <button className={`bg-gradient-to-r ${theme.colors.primary} hover:${theme.colors.primaryHover} text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105`}>
             Consulta Personalizada
           </button>
         </div>

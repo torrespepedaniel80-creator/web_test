@@ -1,8 +1,10 @@
 'use client';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { useTheme } from '@/components/ThemeContext';
 
 export default function Contact() {
+  const { theme } = useTheme();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -39,7 +41,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
+    <section id="contacto" className={`py-24 ${theme.colors.bgContact} relative overflow-hidden`}>
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
