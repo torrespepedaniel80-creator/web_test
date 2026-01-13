@@ -9,10 +9,11 @@ export const themes = {
     colors: {
       bgPrimary: 'bg-white',
       bgSecondary: 'bg-gray-50',
-      bgHero: 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50',
-      bgServices: 'bg-gradient-to-br from-gray-50 to-white',
-      bgClients: 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50',
-      bgContact: 'bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900',
+      // Patrón intercalado: claro -> oscuro -> claro -> oscuro
+      bgHero: 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50', // CLARO
+      bgServices: 'bg-gradient-to-br from-gray-800 via-blue-900 to-purple-900', // OSCURO
+      bgClients: 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50', // CLARO
+      bgContact: 'bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900', // OSCURO
       bgFooter: 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900',
       
       textPrimary: 'text-gray-900',
@@ -54,7 +55,7 @@ export const themes = {
       bgPrimary: 'bg-slate-50',
       bgSecondary: 'bg-white',
       bgHero: 'bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50',
-      bgServices: 'bg-gradient-to-br from-slate-50 to-blue-50',
+      bgServices: 'bg-gradient-to-br from-slate-800 via-blue-900 to-indigo-900', // OSCURO
       bgClients: 'bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50',
       bgContact: 'bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900',
       bgFooter: 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900',
@@ -98,7 +99,7 @@ export const themes = {
       bgPrimary: 'bg-emerald-50',
       bgSecondary: 'bg-white',
       bgHero: 'bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50',
-      bgServices: 'bg-gradient-to-br from-lime-50 to-green-50',
+      bgServices: 'bg-gradient-to-br from-green-800 via-emerald-900 to-teal-900', // OSCURO
       bgClients: 'bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50',
       bgContact: 'bg-gradient-to-br from-green-950 via-emerald-950 to-teal-950',
       bgFooter: 'bg-gradient-to-br from-green-900 via-emerald-900 to-green-900',
@@ -142,7 +143,7 @@ export const themes = {
       bgPrimary: 'bg-orange-50',
       bgSecondary: 'bg-white',
       bgHero: 'bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50',
-      bgServices: 'bg-gradient-to-br from-red-50 to-orange-50',
+      bgServices: 'bg-gradient-to-br from-orange-800 via-red-900 to-rose-900', // OSCURO
       bgClients: 'bg-gradient-to-br from-orange-50 via-amber-50 to-rose-50',
       bgContact: 'bg-gradient-to-br from-orange-950 via-red-950 to-rose-950',
       bgFooter: 'bg-gradient-to-br from-orange-900 via-red-900 to-orange-900',
@@ -186,7 +187,7 @@ export const themes = {
       bgPrimary: 'bg-indigo-50',
       bgSecondary: 'bg-white',
       bgHero: 'bg-gradient-to-br from-indigo-50 via-violet-50 to-purple-50',
-      bgServices: 'bg-gradient-to-br from-blue-50 to-indigo-50',
+      bgServices: 'bg-gradient-to-br from-indigo-800 via-violet-900 to-purple-900', // OSCURO
       bgClients: 'bg-gradient-to-br from-indigo-50 via-violet-50 to-fuchsia-50',
       bgContact: 'bg-gradient-to-br from-indigo-950 via-violet-950 to-purple-950',
       bgFooter: 'bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-900',
@@ -231,7 +232,7 @@ export const themes = {
       bgPrimary: 'bg-slate-900',
       bgSecondary: 'bg-slate-800',
       bgHero: 'bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900',
-      bgServices: 'bg-gradient-to-br from-slate-900 to-slate-800',
+      bgServices: 'bg-gradient-to-br from-slate-100 via-purple-100 to-slate-100', // CLARO
       bgClients: 'bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900',
       bgContact: 'bg-gradient-to-br from-purple-950 via-slate-950 to-black',
       bgFooter: 'bg-gradient-to-br from-black via-slate-950 to-black',
@@ -275,7 +276,7 @@ export const themes = {
       bgPrimary: 'bg-gray-900',
       bgSecondary: 'bg-gray-800',
       bgHero: 'bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900',
-      bgServices: 'bg-gradient-to-br from-gray-900 to-gray-800',
+      bgServices: 'bg-gradient-to-br from-gray-100 via-blue-100 to-gray-100', // CLARO
       bgClients: 'bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900',
       bgContact: 'bg-gradient-to-br from-blue-950 via-gray-950 to-black',
       bgFooter: 'bg-gradient-to-br from-black via-gray-950 to-black',
@@ -319,7 +320,7 @@ export const themes = {
       bgPrimary: 'bg-green-950',
       bgSecondary: 'bg-green-900',
       bgHero: 'bg-gradient-to-br from-green-950 via-emerald-950 to-teal-950',
-      bgServices: 'bg-gradient-to-br from-green-950 to-green-900',
+      bgServices: 'bg-gradient-to-br from-emerald-100 via-green-100 to-teal-100', // CLARO
       bgClients: 'bg-gradient-to-br from-green-950 via-emerald-950 to-green-950',
       bgContact: 'bg-gradient-to-br from-emerald-950 via-green-950 to-black',
       bgFooter: 'bg-gradient-to-br from-black via-green-950 to-black',
@@ -363,7 +364,7 @@ export const themes = {
       bgPrimary: 'bg-orange-950',
       bgSecondary: 'bg-red-950',
       bgHero: 'bg-gradient-to-br from-orange-950 via-red-950 to-rose-950',
-      bgServices: 'bg-gradient-to-br from-orange-950 to-red-950',
+      bgServices: 'bg-gradient-to-br from-orange-100 via-red-100 to-rose-100', // CLARO
       bgClients: 'bg-gradient-to-br from-orange-950 via-rose-950 to-pink-950',
       bgContact: 'bg-gradient-to-br from-red-950 via-orange-950 to-black',
       bgFooter: 'bg-gradient-to-br from-black via-red-950 to-black',
@@ -407,7 +408,7 @@ export const themes = {
       bgPrimary: 'bg-indigo-950',
       bgSecondary: 'bg-blue-950',
       bgHero: 'bg-gradient-to-br from-indigo-950 via-blue-950 to-violet-950',
-      bgServices: 'bg-gradient-to-br from-indigo-950 to-blue-950',
+      bgServices: 'bg-gradient-to-br from-indigo-100 via-violet-100 to-purple-100', // CLARO
       bgClients: 'bg-gradient-to-br from-indigo-950 via-violet-950 to-purple-950',
       bgContact: 'bg-gradient-to-br from-violet-950 via-indigo-950 to-black',
       bgFooter: 'bg-gradient-to-br from-black via-indigo-950 to-black',

@@ -4,6 +4,22 @@ import { useTheme } from '@/components/ThemeContext';
 export default function Services() {
   const { theme } = useTheme();
   
+  // Detectar si Services tiene fondo oscuro
+  const isDarkBg = theme.colors.bgServices.includes('gray-800') || 
+                   theme.colors.bgServices.includes('gray-900') ||
+                   theme.colors.bgServices.includes('blue-900') ||
+                   theme.colors.bgServices.includes('purple-900') ||
+                   theme.colors.bgServices.includes('emerald-900') ||
+                   theme.colors.bgServices.includes('red-900') ||
+                   theme.colors.bgServices.includes('violet-900') ||
+                   theme.colors.bgServices.includes('950');
+  
+  // Ajustar colores de texto según el fondo
+  const textPrimary = isDarkBg ? 'text-white' : theme.colors.textPrimary;
+  const textSecondary = isDarkBg ? 'text-gray-300' : theme.colors.textSecondary;
+  const cardBg = isDarkBg ? 'bg-white/10' : theme.colors.cardBg;
+  const cardBorder = isDarkBg ? 'border-white/20' : theme.colors.cardBorder;
+  
   const services = [
     {
       icon: (
@@ -88,9 +104,9 @@ export default function Services() {
               Soluciones Integrales
             </span>
             <br />
-            <span className={theme.colors.textPrimary}>para tu Empresa</span>
+            <span className={textPrimary}>para tu Empresa</span>
           </h2>
-          <p className={`text-xl ${theme.colors.textSecondary} max-w-2xl mx-auto`}>
+          <p className={`text-xl ${textSecondary} max-w-2xl mx-auto`}>
             Ofrecemos una amplia gama de servicios contables y financieros diseñados para impulsar el éxito de tu negocio.
           </p>
         </div>
@@ -100,7 +116,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group ${theme.colors.cardBg} rounded-2xl p-8 ${theme.colors.cardShadow} hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border ${theme.colors.cardBorder} animate-fadeInUp`}
+              className={`group ${cardBg} rounded-2xl p-8 ${theme.colors.cardShadow} hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border ${cardBorder} animate-fadeInUp backdrop-blur-lg`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Icon */}
@@ -111,17 +127,17 @@ export default function Services() {
               </div>
 
               {/* Title */}
-              <h3 className={`text-2xl font-bold mb-3 ${theme.colors.textPrimary} group-hover:bg-gradient-to-r group-hover:${theme.colors.primary} group-hover:bg-clip-text group-hover:text-transparent transition-colors`}>
+              <h3 className={`text-2xl font-bold mb-3 ${textPrimary} group-hover:bg-gradient-to-r group-hover:${theme.colors.primary} group-hover:bg-clip-text group-hover:text-transparent transition-colors`}>
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className={`${theme.colors.textSecondary} mb-6 leading-relaxed`}>{service.description}</p>
+              <p className={`${textSecondary} mb-6 leading-relaxed`}>{service.description}</p>
 
               {/* Features */}
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className={`flex items-center text-sm ${theme.colors.textSecondary}`}>
+                  <li key={idx} className={`flex items-center text-sm ${textSecondary}`}>
                     <svg
                       className="w-5 h-5 text-green-500 mr-2 flex-shrink-0"
                       fill="none"
@@ -152,7 +168,7 @@ export default function Services() {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <p className={`${theme.colors.textSecondary} mb-4`}>¿No encuentras lo que buscas?</p>
+          <p className={`${textSecondary} mb-4`}>¿No encuentras lo que buscas?</p>
           <button className={`bg-gradient-to-r ${theme.colors.primary} hover:${theme.colors.primaryHover} text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105`}>
             Consulta Personalizada
           </button>
