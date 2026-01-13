@@ -1,11 +1,19 @@
-import { Button } from "@/components/ui/button";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import Clients from "@/components/Clients";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="p-10">
-      <h1 className="text-4xl font-bold">Mi Empresa</h1>
-
-      <Button className="mt-4">Contáctanos</Button>
-    </main>
+    <>
+      <Header />
+      <Hero />
+      <Services />
+      <Clients />
+      <Contact />
+      <Footer />
+    </>
   );
 }
