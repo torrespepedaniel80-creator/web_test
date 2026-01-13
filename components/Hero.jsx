@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { useTheme } from '@/components/ThemeContext';
 import AnimatedCounter from '@/components/AnimatedCounter';
+import RotatingText from '@/components/RotatingText';
 
 export default function Hero() {
   const { theme } = useTheme();
@@ -40,7 +41,13 @@ export default function Hero() {
                 Impulsa tu Negocio
               </span>
               <br />
-              <span className={theme.colors.textPrimary}>con Contabilidad Experta</span>
+              <span className={theme.colors.textPrimary}>
+                con Contabilidad{' '}
+                <RotatingText 
+                  words={['Experta', 'Segura', 'de Calidad', 'Íntegra']} 
+                  interval={3000}
+                />
+              </span>
             </h1>
 
             <p className={`text-xl ${theme.colors.textSecondary} leading-relaxed`}>

@@ -72,7 +72,7 @@ export default function Header() {
             </button>
             <Button
               onClick={() => scrollToSection('contacto')}
-              className={`bg-gradient-to-r ${theme.colors.primary} hover:${theme.colors.primaryHover} text-white px-6`}
+              className={`bg-gradient-to-r ${theme.colors.primary} hover:${theme.colors.primaryHover} text-white px-6 animate-pulse-cta`}
             >
               Consulta Gratis
             </Button>
@@ -137,7 +137,7 @@ export default function Header() {
             </button>
             <Button
               onClick={() => scrollToSection('contacto')}
-              className={`w-full bg-gradient-to-r ${theme.colors.primary} hover:${theme.colors.primaryHover} text-white`}
+              className={`w-full bg-gradient-to-r ${theme.colors.primary} hover:${theme.colors.primaryHover} text-white animate-pulse-cta`}
             >
               Consulta Gratis
             </Button>
